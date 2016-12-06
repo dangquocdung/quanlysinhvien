@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QUAN LY SINH VIEN</title>
+  </head>
+  <body>
+    <h1>SUA SINH VIEN</h1>
+    <br/>
+    <form action="/sua" method="post" enctype="application/x-www-form-urlencoded">
+      <input type="text" name="txtHoTen" value="<%= sv.Hoten %>"><br />
+      <input type="text" name="txtEmail" value="<%= sv.Email %>"><br />
+      <input type="hidden" name="txtId" value="<%= sv.id %>">
+      <input type="submit" name="btnSua" value="Sua">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="http://localhost:3002" />
+    <meta charset="utf-8">
+    <title>QUAN LY SINH VIEN</title>
+  </head>
+  <body>
+    <table width="500" border="1">
+      <tr>
+        <th>ID</th>
+        <th>Ho Ten</th>
+        <th>Email</th>
+        <th><a href="/them">Thêm</a></th>
+      </tr>
+      <%  danhsach.rows.forEach(function (sv){%>
+      <tr>
+        <td><%= sv.id %></td>
+        <td><%= sv.Hoten %></td>
+        <td><%= sv.Email %></td>
+        <td><a href="/sua/<%= sv.id %>">Sửa</a> - <a onClick="return confirm('Are you sure?')" href="/xoa/<%= sv.id %>">Xóa</a></td>
+      </tr>
+      <%});%>
+    </table>
+  </body>
+</html>
